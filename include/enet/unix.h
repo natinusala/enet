@@ -12,6 +12,10 @@
 #include <netinet/in.h>
 #include <unistd.h>
 
+#ifdef __SWITCH__
+#include <arpa/inet.h>
+#endif
+
 #ifdef MSG_MAXIOVLEN
 #define ENET_BUFFER_MAXIMUM MSG_MAXIOVLEN
 #endif

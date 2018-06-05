@@ -51,7 +51,11 @@
 #endif
 
 #ifdef HAS_POLL
+#ifdef __SWITCH__
+#include <poll.h>
+#else
 #include <sys/poll.h>
+#endif
 #endif
 
 #ifndef HAS_SOCKLEN_T
